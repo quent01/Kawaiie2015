@@ -1,0 +1,167 @@
+// ====================================================
+/**
+* Less file to determine the different style 
+* of tags of the website
+**/ 
+// ====================================================
+
+// ==================
+// @author : quent01
+// ==================
+
+
+
+/** -------- TEMPLATE TAG --------
+ *  ------------------------------
+ *
+ **/
+	.kawaiie-template-tag(
+		@bgColor : crimson,
+		@txtColor : #ccc,
+		@height : 26px,
+		@display : block
+		){
+		.field-item, .views-row{
+			display: @display;
+			& when (@display = inline-block){
+				&{
+					margin-left: 5px;	
+				} 
+			}
+		}
+		a{
+			position: relative;
+			background: @bgColor;
+			@border-radius : (floor(6*@height/23));
+			.border-radiuses(
+				@topright 		: 0,
+				@bottomright 	: 0,
+				@bottomleft 	: @border-radius,
+				@topleft 		: @border-radius
+			);
+			color: @txtColor;
+			display: inline-block;
+			height: @height;
+			line-height: @height;
+			padding: 0 15px 0 22px;
+			position: relative;
+			margin: 2px 10px 2px 0;
+			text-decoration: none;
+			// .transition(all 0.3s ease-in-out);
+			
+			&:before{
+				background: #fff;
+				.border-radius(10px);
+				.box-shadow(inset 0 1px rgba(0, 0, 0, 0.25));
+				content: '';
+				height: 6px; width: 6px;
+				left: 10px; top: ((@height - 6px)/2);
+				position: absolute;
+			}
+			&:after{
+				background: transparent;
+				border-bottom: (@height/2) solid transparent;
+				border-left: (@height/2 - 3px) solid @bgColor;
+				border-top: (@height/2) solid transparent;
+				content: '';
+				position: absolute;
+				right: -(@height/2 - 3px); top: 0;
+			}
+			&:hover{
+				background-color: lighten(@bgColor, 20%);
+		  		color: lighten(@txtColor, 20%);
+			}
+			&:hover::after {
+		   		border-left-color: lighten(@bgColor, 20%); 
+				// .transition(all 0.3s ease-in-out);
+
+			}
+		}
+	}
+
+
+
+/** -------- TAGS CATEGORY ARTICLE --------
+ *  ---------------------------------------
+ *
+ *  Manga / BD / Comics / ¨Proj
+ *
+ **/
+
+	.kawaiie-article-tag(
+		@bgColor : @brand-red,
+		@txtColor : #fff, @txtSize : 14px,
+		@height : 30px,
+		@display : block
+		){
+			.kawaiie-template-tag(
+				@bgColor,
+				@txtColor,
+				@height,
+				@display
+			);
+	}
+
+
+
+/** -------- TAGS CATEGORY PROJ --------
+ *  ------------------------------------
+ *
+ *  Arts Martiaux / Clint Eastwood / Comedie / Comics / ...
+ *
+ **/
+	.kawaiie-proj-tag(
+		@bgColor : crimson,
+		@txtColor : #ccc,
+		@size : 26px
+		){
+		.kawaiie-template-tag(
+			@bgColor,
+			@txtColor,
+			@size
+		);
+	}
+
+
+
+/** -------- TAGS CATEGORIE LIVRE SERIE --------
+ *  --------------------------------------------
+ *
+ *  Manga / BD / Comics
+ *
+ **/
+ 	.kawaiie-category-livre-serie-tag(
+ 		@bgColor : crimson,
+		@txtColor : #ccc,
+		@size : 26px,
+		@display : block
+		){
+		.kawaiie-template-tag(
+			@bgColor,
+			@txtColor,
+			@size,
+			@display
+		);	
+ 	}
+
+
+
+/** -------- TAGS LIVRE SERIE --------
+ *  ----------------------------------
+ *
+ *  Action / Arts Martiaux / Aventure / Heroic Fantasy / ...
+ *
+ **/
+  	.kawaiie-livre-serie-tag(
+ 		@bgColor : crimson,
+		@txtColor : #ccc,
+		@size : 26px,
+		@display : block
+		){
+		.kawaiie-template-tag(
+			@bgColor,
+			@txtColor,
+			@size,
+			@display
+		);	
+ 	}

@@ -1,0 +1,69 @@
+// LESS file for the node http errors of the website
+// exemple 404, 403 ...
+/**
+ * @author : Quentin
+ *
+ **/
+
+
+.page-custom-404{
+
+	.main-container{
+		padding-bottom: 0;
+	}
+
+	.region-content{
+		text-align: center;
+		margin-right: (0 - @padding-main-container);
+		margin-left: (0 - @padding-main-container);
+		position: relative;
+		display: block;
+
+		&:after{
+			content: '';
+			background: url("@{path-img-bg}/bg-404.jpg") no-repeat 50% 0%;
+			background-size: 100%;
+			opacity: 0.8;
+			top: 0; left: 0; bottom: 0; right: 0;
+			position: absolute;
+			
+			@media (max-width:@screen-xs){
+				background-size: 150%;
+			}
+		}
+
+		.accroche-txt,
+		.sub-accroche-txt{
+			color: #fff;
+			position: relative;
+			z-index: 99;
+			padding-left: 10px; padding-right: 10px;
+			text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.75);
+		}
+
+		.accroche-txt{
+			font-family: @bebas;
+			font-size: @font-size-h2;
+			margin-top: 40px;
+			
+		}
+		.sub-accroche-txt{
+			font-size: @font-size-large;
+		}
+		.container-btn{
+			position: relative;
+			z-index: 99;
+			.kawaiie-btn(
+				@txtSize : @font-size-h2,
+				@paddingTop : 5px, @paddingRight : 30px, @paddingBottom : 5px, @paddingLeft : 30px,
+				@marginTop : 20px, @marginRight : 0, @marginBottom : 40px, @marginLeft : 0
+			);
+			a{
+				font-family: @bebas;
+			}
+		}	
+		
+	}
+
+}
+

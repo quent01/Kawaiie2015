@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'LoveloBlack';
+    src: url('loveloblack.eot');
+    src: url('loveloblack.eot') format('embedded-opentype'),
+         url('loveloblack.woff') format('woff'),
+         url('loveloblack.ttf') format('truetype'),
+         url('loveloblack.svg#LoveloBlack') format('svg');
+}

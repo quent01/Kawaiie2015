@@ -1,0 +1,114 @@
+// LESS file for the main components of the website
+
+/**
+ * @author : Quentin
+ *
+ **/
+
+body{
+	background: url("@{path-img-bg}/bg-body.png");
+	background-repeat: repeat;
+	background-position: top left;
+	background-attachment: fixed;
+	font-family: @lato-regular;
+}
+
+
+// TITLES
+	h1{.kawaiie-h1;}
+	h2{.kawaiie-h2;}
+	.pane-liste-series .pane-title{margin-bottom: 0;}
+	.page-header{
+		color: @gray-darker;
+		text-transform: uppercase;
+		font-family: @bebas;
+		margin-top: @padding-main-container;
+		margin-bottom: @padding-main-container;
+	}
+
+// PAGER
+	.kawaiie-infinite-scroll; //no pager if infinite scroll 
+
+
+// RESPONSIVE VIDEO
+	.kawaiie-video{
+		position: relative;
+		padding-bottom: 56.25%; // 16:9
+		height: 0;
+		// overflow: hidden;
+
+		iframe,
+		object{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: 100% !important;
+		}
+	}
+
+
+// CATEGORIE ET TAGS
+	.category-serie{
+		.kawaiie-category-livre-serie-tag;
+	}
+	.tags-serie{
+		.kawaiie-livre-serie-tag(@display : inline-block);
+	}
+
+
+// LISTE SERIES
+	// Liste serie ac description
+		.row-container-series-col{
+			.container-livre-serie{
+				.container-serie-col(@nbrCol : 2, @descPt : 0);
+			}
+		}
+
+	// Liste serie 
+
+
+// MAIN HEADER
+
+
+// FOOTER
+	footer.footer{
+		background-color: @gray-darker;
+		width: 100% !important;
+		border: 0 !important;
+		margin-top: 0 !important;
+	}
+
+
+// MAIN CONTAINER
+	
+	.main-container{
+		background: @container-bg;
+		box-sizing: content-box;
+		padding: @padding-main-container;
+		padding-bottom: 30px;
+		
+
+		#page-header{
+			@media (max-width : @screen-xs){
+				display: none;
+			}
+			.container-bg-header{
+				margin-top: ( 0 - @padding-main-container ) !important;
+				margin-right: ( 0 - @padding-main-container );
+				margin-left: ( 0 - @padding-main-container );
+				img.bg-header{
+					width: 100% !important;
+					height: auto !important;
+				}
+			}
+		}
+		
+		.drop-shadow(
+			@x: 0px, @y: 5px, 
+			@blur: 20px, @spread: 3px, @alpha: 0.9
+		);
+	}
+
+
+	

@@ -1,0 +1,47 @@
+// LESS file for the menu footer of the website
+
+/**
+ * @author : Quentin
+ *
+ **/
+
+ #block-menu-menu-menu-footer{
+
+	.block-title{
+		text-align: center;
+		color: #fff;
+	}
+
+
+	ul{text-align: center; margin-top: 30px;}
+ 	.leaf{
+ 		display: inline-block;
+ 		vertical-align: middle;
+ 		&.last{
+ 			& > a:after{
+ 				content: '';
+ 				display: none;
+ 			}
+ 		}
+ 		& > a{
+ 			padding: 0;
+ 			text-transform: uppercase;
+ 			font-weight: bold;
+ 			&:after{
+	 			content: '';
+	 			width: 8px; height: 8px;
+	 			background-color: @brand-red;
+	 			display: inline-block;
+	 			.border-radius(8px);
+	 			vertical-align: middle;
+	 			margin-left: 20px; margin-right: 20px;
+ 			}
+ 			&:hover{
+ 				background-color: transparent;
+ 				color: #fff;
+ 			}
+
+ 		}
+ 	}
+
+}

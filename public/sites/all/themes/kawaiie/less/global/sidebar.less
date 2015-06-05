@@ -1,0 +1,84 @@
+// LESS file for the component of the sidebar
+
+/**
+ * @author : Quentin
+ *
+ **/
+
+ .sidebar-right{
+	
+	@media (max-width:@screen-sm){
+		float: right;
+		width: 100%;
+	}
+
+	// Liste des séries
+ 	.pane-liste-series{
+		
+		.pane-title{
+
+		}
+		.container-serie{
+			margin-bottom: 10px;
+
+			.title{
+				background-color: fadeout(@gray-dark, 15%);
+				opacity: 0;
+				height: 50px; line-height: 50px;
+				margin-top: -50px;
+				position: relative;
+				text-align: center;
+				.transition(all 0.3s ease-in-out);
+				a{
+					color: #fff;
+					display: inline-block;
+					line-height: normal;
+					text-decoration: none;
+					vertical-align: middle;
+				}
+			}
+
+			.mask-info{
+				
+				&:hover,
+				&:active,
+				&:focus{
+					.title{
+						opacity: 1;
+					}
+				}
+			}
+
+			.img{
+				img{
+					height: auto;
+					width: 100%;
+				}
+			}
+
+		}
+ 	}
+
+ 	// Liste des derniers articles
+	 	.pane-articles{
+	 		.container-article{
+				.container-article-sidebar;	
+			}
+	 	}	
+
+
+ 	// Google map
+	 	.google-map-field{
+
+	 		.google-map-field-label{
+	 			display: none;
+	 		}
+	 		.google_map_field_display{
+	 			width: 100%;
+	 			height: 400px;
+	 			@media (min-width: @screen-xs) and (max-width:@screen-sm){
+	 				height: 200px;
+	 			}
+	 		}
+	 	}
+ }

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'WisdomScriptAIRegular';
+    src: url('wisdomscript.eot');
+    src: url('wisdomscript.eot') format('embedded-opentype'),
+         url('wisdomscript.woff') format('woff'),
+         url('wisdomscript.ttf') format('truetype'),
+         url('wisdomscript.svg#WisdomScriptAIRegular') format('svg');
+}

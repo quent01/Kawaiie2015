@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'LatoHairlineItalic';
+    src: url('lato-haiita.eot');
+    src: url('lato-haiita.eot') format('embedded-opentype'),
+         url('lato-haiita.woff') format('woff'),
+         url('lato-haiita.ttf') format('truetype'),
+         url('lato-haiita.svg#LatoHairlineItalic') format('svg');
+}

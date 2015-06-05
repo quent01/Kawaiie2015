@@ -1,0 +1,73 @@
+// LESS file for the node 'article' of the website
+
+// @author : Quentin
+
+.kawaiie-article{
+	
+	.kawaiie-tags-list{
+		.kawaiie-article-tag;
+	}
+
+	.article-img{
+		text-align: center;
+		img{
+			.drop-shadow(
+				@x: 0, @y: 2px,
+				@blur: 3px, @spread: 1px,
+				@hexColor: #000, @alpha: 0.5
+			);
+			max-width: 100%;
+			height: auto;
+			background-color: @container-bg;
+			border: solid 3px #fff;
+			.transition(all 0.3s linear);
+
+			&:hover, &:active{
+				.scale (1.3);
+				.drop-shadow(
+					@x: 0, @y: 4px,
+					@blur: 3px, @spread: 0px,
+					@hexColor: #000, @alpha: 0.5
+				);
+			}
+		}
+	}
+
+	.article-body{
+		strong{
+			font-size: @font-size-bold;
+			text-transform: uppercase;
+			display: inline-block;
+			margin-bottom: ( 0 - @font-size-bold - 5px);
+			&:first-letter{
+				font-size: (@font-size-bold + 10px);
+				line-height: @font-size-bold;
+			}
+		}
+		p{
+			margin-top: 10px;
+		}
+		img{
+			.drop-shadow(
+				@x: 0, @y: 2px,
+				@blur: 8px, @spread: 1px,
+				@hexColor: #000, @alpha: 0.6
+			);
+			max-width: 100%;
+			height: auto;
+			display: inline-block;
+			border: solid 2px #fff; 
+			margin: 5px!important;
+			background-color: @container-bg;
+			.transition(all 0.3s linear);
+
+			&:hover, &:active{
+				.scale (1.3);
+			}	
+		}
+	}
+
+	.article-video{
+
+	}
+} 

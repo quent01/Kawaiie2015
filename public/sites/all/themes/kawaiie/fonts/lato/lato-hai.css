@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'LatoHairline';
+    src: url('lato-hai.eot');
+    src: url('lato-hai.eot') format('embedded-opentype'),
+         url('lato-hai.woff') format('woff'),
+         url('lato-hai.ttf') format('truetype'),
+         url('lato-hai.svg#LatoHairline') format('svg');
+}

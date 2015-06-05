@@ -1,0 +1,153 @@
+// LESS file for the header of the website
+
+/**
+ * @author : Quentin
+ *
+ **/
+
+
+header#navbar{
+	background-color: @header-bg;
+	@media (max-width: (@screen-xs - 150px) ) {
+		height: 65px;		
+	}	
+	&.container{
+		width: 100% !important;
+		max-width: none;
+		margin: 0 auto 0 auto;
+		.border-radius(0);
+		.container{
+			max-width: @container-large-desktop; 
+			margin: auto;
+			@media (max-width: (@screen-xs - 150px) ) {
+				height: 65px;		
+			}
+		}
+	}
+
+
+	// navbar header (logo)
+		.navbar-header{
+			background-color: @header-bg;
+			@media (max-width:@screen-xs){
+				position: fixed;
+				z-index: 3000;
+				position: absolute;
+				top: 0; right: 0; left: 0;
+				height: 65px;
+				.drop-shadow(
+					@x: 0, @y: 1px, 
+					@blur: 2px, @spread: 0, 
+					@hexColor: #000, @alpha: 0.3
+				);
+				// margin-top: -2px;
+			}
+			a{display: block;}
+			.logo{
+				@media (max-width : @screen-xs){
+					width: 50%;
+					height: auto;
+				}
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.navbar-toggle{
+				margin-top: 18px;
+				display: none;
+			}
+		}
+
+
+	// MAIN-MENU
+		.navbar-collapse{
+			display: inline-block;
+
+			& > nav{
+				display: inline-block;
+				margin-top: 30px;
+				float: right;
+				@media (max-width:@screen-sm-min) {
+					margin-top: 0;
+				}
+				@media (max-width:@screen-xs-min) {
+					display: none;
+				}
+			}
+
+			.menu, 
+			.nav{
+				display: inline-block;
+				border-top: solid 3px @brand-red; 
+				border-bottom: solid 3px @brand-red; 
+
+				& > li{
+					float: left;
+					&.last{
+						border-right: none; 
+					}
+					height: 50px; line-height: 50px;
+					
+					&.expanded{
+						span{
+							display: inline-block;
+							cursor: pointer;
+							color: @brand-red;
+						}
+						.caret{
+							margin-left: 10px;
+							border-top-color: @brand-red;
+						}
+					}
+
+					& > a,
+					& > span{
+						padding: 0;
+						font-family: @bebas;
+						font-size: 20px; 
+						padding-right: 20px; padding-left: 20px;
+						.transition(all 0.3s ease-in-out);
+
+						&:hover, 
+						&:active,
+						&:focus{
+							background-color: @brand-red;
+							color: #fff;
+
+							.caret{
+								border-top-color: #fff;
+							}
+						}
+					}
+	 			}
+				.dropdown-menu{
+					padding: 0;
+					li{
+						border: none;
+						float: none;
+						display: block;
+						border-top: solid 1px #fff;
+						&.last{
+							border-bottom: solid 1px #fff;
+						}
+						a{
+							background-color: @brand-red;
+							color: #fff;
+							font-family: @bebas;
+							font-size: 20px;
+							.transition(all 0.3s ease-in-out);
+
+							&:hover, 
+							&:active{
+								background-color: #fff;
+								color: @brand-red;
+							}
+						}
+					}
+				}
+			}
+		}
+
+}

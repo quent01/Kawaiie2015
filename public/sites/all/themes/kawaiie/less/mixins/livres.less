@@ -1,0 +1,60 @@
+// ====================================================
+/**
+* Less file to determine the different style 
+* of a display of livre
+**/ 
+// ====================================================
+
+// ==================
+// @author : quent01
+// ==================
+
+.container-livres-col4(
+	@bgColor : @bg-odd
+	){
+	
+	// .views-row-even{
+	// 	.container-livre{
+	// 		background-color: @bgColor;
+	// 	}
+	// }
+
+	.container-livre{
+		padding-bottom: @grid-gutter-width; 
+		
+		.title{
+			text-align: center;
+			background-color: #000;
+			padding-top: 5px; padding-bottom: 5px;
+			display: none;
+			a{
+				text-decoration: none;
+			}
+		}
+
+		.img{
+			text-align: center;
+			a{
+				display: block;
+				&:hover,
+				&:active,
+				&:focus{
+					img{
+						.rotate(3deg);
+					}
+				}
+			}	
+			img{
+				height: auto;
+				width: 95%;
+				.transition(all 0.3s ease-in-out);
+
+				@media (max-width:@screen-sm){
+					max-width: 100%;
+				}
+			}
+		}
+		
+	}
+
+}

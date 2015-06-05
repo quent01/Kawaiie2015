@@ -1,0 +1,104 @@
+// ====================================================
+/**
+* Less file to determine the different style 
+* of forms
+**/ 
+// ====================================================
+
+// ==================
+// @author : quent01
+// ==================
+
+// TEMPLATE FORM SUBMIT
+.kawaiie-form-submit(
+	@bgColor 		: @brand-red,
+	@txtColor 		: white, @fontFamily : @bebas, @fontSize : 20px,
+	@border-radius  : 10px,
+	@mT 			: 10px, @mB : 10px,
+	@pT 			: 8px, @pR : 25px
+	){
+	margin-top: @mT; margin-bottom: @mB;
+	padding: @pT @pR @pT @pR;
+
+	background-color: @bgColor;
+	
+	color: @txtColor; 
+	text-transform: uppercase;
+	font-family: @fontFamily;
+	font-size: @fontSize;
+	letter-spacing: 1px;
+
+	.border-radius(@border-radius);
+
+	&#edit-draft{
+
+	}
+	&#edit-submit{
+		
+	}
+
+	&:hover,
+	&:active{
+		color: darken(@txtColor, 10%);
+		background-color: lighten(@bgColor, 10%);
+	}
+}
+
+
+// TEMPLATE FORM
+.kawaiie-form(
+	@border-radius : 5px
+	){
+	form{
+		padding: 20px;
+		background-color: @gray-lighter;
+		text-align: center;
+		.border-radius(10px);
+
+		.form-item{
+			margin-top: 10px; margin-bottom: 10px;
+			text-align: left;
+		}
+		
+		label{
+			.border-radius(@border-radius);
+			margin-bottom: 0;
+			padding-left: 5px;
+		}
+		input, textarea{
+			.border-radius(@border-radius);
+			border: none;
+			border: solid 1px @gray-light; 
+			padding: 6px 12px;
+		}
+		.webform-component-textfield{
+
+		}
+		
+		.webform-component-email{
+			label{
+				margin-right: 20px;
+			}
+			input{
+				width: 100%;
+			}
+		}
+		
+		.webform-component-textarea{
+
+		}
+
+
+		#edit-draft{
+			.kawaiie-form-submit;
+			margin-right: 10px;
+		}
+
+		#edit-submit{
+			.kawaiie-form-submit;
+			margin-left: 10px;
+		}
+	}
+
+
+}

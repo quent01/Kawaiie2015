@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'LatoItalic';
+    src: url('lato-regita.eot');
+    src: url('lato-regita.eot') format('embedded-opentype'),
+         url('lato-regita.woff') format('woff'),
+         url('lato-regita.ttf') format('truetype'),
+         url('lato-regita.svg#LatoItalic') format('svg');
+}

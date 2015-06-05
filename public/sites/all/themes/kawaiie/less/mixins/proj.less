@@ -1,0 +1,82 @@
+// ====================================================
+/**
+* Less file to determine the different style 
+* of a display of proj
+**/ 
+// ====================================================
+
+// ==================
+// @author : quent01
+// ==================
+
+.container-proj-col2(
+	
+	){
+
+		@media (max-width: @screen-sm){ margin-bottom: 6px;}
+
+		&:nth-child(2n+1) .container-content{background-color: @bg-odd;}
+		
+		// In case the display is unformated list (to enable infinite scroll )
+		&.views-row{
+			width: 50%;
+			// height: @maxHeight;
+			padding-left: @grid-gutter-width;
+			padding-right: @grid-gutter-width;
+			float: left;
+			@media (max-width:@screen-md) {
+			
+			}
+			@media (max-width: @screen-sm){
+			
+			}
+			@media (max-width: @screen-xs) {
+				width: 100%;
+				// height: (@maxHeight - 20px);
+			}
+		}
+
+		.title{
+			display: inline-block;
+			padding: 4px 20px 4px 10px;
+			background-color: @gray;
+			text-transform: uppercase;
+			.border-radiuses(@topright: 10px, @topleft: 10px);
+			a{
+				color: #fff;
+				text-decoration: none;
+				text-shadow :0 1px 1px rgba(0, 0, 0, 0.5);
+			}
+		}
+		
+		.container-content{
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.date{
+			padding-left: 10px;
+			padding-right: 10px;
+			span:first-letter{
+				text-transform: uppercase;
+				display: inline-block;
+			}
+			.glyphicon{
+				margin-right: 10px;
+			}
+		}
+		
+		.video{	
+			z-index: 99;
+		}
+
+		.tags{
+			.kawaiie-proj-tag;
+			padding-left: 5px; padding-right: 5px;
+			background-color: @gray-youtube;
+			a{z-index: 10;}
+		}
+		
+		.kawaiie-container-read-more;
+
+}

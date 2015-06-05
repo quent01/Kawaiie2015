@@ -1,0 +1,143 @@
+// ====================================================
+/**
+* Less file to determine the different style 
+* of main module of the website
+**/ 
+// ====================================================
+
+// ==================
+// @author : quent01
+// ==================
+
+
+/** ---------------------------------------
+ *  		 READ MORE BUTTON
+ *  ---------------------------------------
+ *  Template for the styling of the button of the read more module
+ **/
+.kawaiie-btn-read-more(
+	@moreBgColor  : @brand-red,
+	@moreHeight   : 30px,
+	@moreTxtAlign : center, @moreTxtColor : #fff,
+	){
+
+	background-color: @moreBgColor;
+	color: @moreTxtColor;
+	text-align: @moreTxtAlign;
+	height: @moreHeight; line-height: @moreHeight;
+	cursor: pointer;
+	z-index: 1000;
+	.transition(all 0.3s ease-in-out);
+
+	&:hover, &:active, &:focus{
+		background-color: lighten(@moreBgColor, 10%);
+		& > .glyphicon-plus{
+			.rotate(45deg);
+			.transition(all 0.3s ease-in-out);
+		}
+		& + .mask{
+			opacity: 1;
+			overflow: hidden;
+			z-index: 1000; //on top of img
+			p{
+				.transform(translateY(0px));
+				opacity: 1;
+			}
+			.desc{
+				.transform(translateY(0px));
+				opacity: 1;
+			}
+		}
+	}
+
+	.glyphicon{
+		margin-left: 20px;
+	}
+}
+
+
+
+/** ----------------READ MORE MODULE FOR A PROJ----------------
+ *  -----------------------------------------------------------
+ *  Template for the styling of a module that reveal and translate 
+ *  and hidden description on the content on hover
+ *
+ **/ 
+.kawaiie-container-read-more(
+	@moreBgColor  : @brand-red,
+	@moreHeight   : 30px,
+	@moreTxtAlign : center, @moreTxtColor : #fff,
+	@descBgColor  : rgba(0, 0, 0, 0.9),
+	@descTxtAlign : center, @descTxtColor : @gray-lighter
+	){
+	 	.mask{
+			font-style: italic;
+			position: absolute;
+			top: 20px; bottom: 30px; 
+			background-color: @descBgColor;
+			color: @descTxtColor;
+			opacity: 0;
+			.transition(all 0.4s ease-in-out);
+
+			p{
+				.transform(translateY(-30px));
+				opacity: 0;
+				padding: 25px; 
+				height: 0;
+				text-align: @descTxtAlign;
+				.transition(all 0.2s ease-in-out);
+			}
+		}
+
+		.more{
+			.kawaiie-btn-read-more;
+		}
+}
+
+
+/** ----------------READ MORE MODULE FOR A SERIE----------------
+ *  ------------------------------------------------------------
+ *  Template for the styling of a module that reveal and translate 
+ *  and hidden description on the content on hover
+ *
+ **/ 
+.kawaiie-container-livre-read-more(
+	@moreBgColor  : @brand-red,
+	@moreHeight   : 30px,
+	@moreTxtAlign : center, @moreTxtColor : #fff,
+	@descBgColor  : rgba(0, 0, 0, 0.9),
+	@descPt : 25px,
+	@descTxtAlign : center, @descTxtColor : @gray-lighter
+	){
+		.more{
+			.kawaiie-btn-read-more;
+		}
+
+		.mask{
+			font-style: italic;
+			position: absolute;
+			top: 30px; bottom: 30px;
+			overflow: hidden; 
+			background-color: @descBgColor;
+			color: @descTxtColor;
+			opacity: 0;
+			padding-right: 30px; padding-left: 30px;
+			.transition(all 0.4s ease-in-out);
+			
+			.desc{
+				.transform(translateY(-30px));
+				height: 0;
+				opacity: 0;
+				padding-top: @descPt; padding-bottom: @descPt; 
+				text-align: @descTxtAlign;
+				.transition(all 0.2s ease-in-out);
+
+			}
+
+			.note{
+				display: none;
+			}
+		}
+		
+
+}

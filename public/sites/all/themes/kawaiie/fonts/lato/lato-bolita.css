@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'LatoBoldItalic';
+    src: url('lato-bolita.eot');
+    src: url('lato-bolita.eot') format('embedded-opentype'),
+         url('lato-bolita.woff') format('woff'),
+         url('lato-bolita.ttf') format('truetype'),
+         url('lato-bolita.svg#LatoBoldItalic') format('svg');
+}

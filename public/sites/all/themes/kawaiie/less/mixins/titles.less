@@ -1,0 +1,53 @@
+// LESS file for the different title of the website
+
+/**
+ * @author : Quentin
+ *
+ **/
+
+.title(
+	@font-family : @bebas,
+	@font-size,
+	@font-style
+	){
+	font-family: @font-family;
+	font-size: @font-size;
+	font-style: @font-style;
+}
+
+.title-link(
+	@font-family : @bebas,
+	@font-size,
+	@font-style,
+	@bgColor, @bgColorHover
+	){
+	a{
+		font-family: @font-family;
+		font-size: @font-size;
+		font-style: @font-style;
+		background-color: @bgColor;
+		&:hover, &:active{
+			background-color: @bgColorHover;
+		}
+	}
+}
+
+ .kawaiie-h1{
+	.title(@bebas, @font-size-h1, normal);
+ }
+
+.kawaiie-h2{
+	.title(@bebas, @font-size-h2, normal);
+ }
+
+ .kawaiie-h3{
+ 	
+ }
+
+ .kawaiie-h4{
+ 	
+ }
+
+ .kawaiie-h5{
+ 	
+ }

@@ -1,0 +1,94 @@
+// ====================================================
+/**
+*  Less file to determine the different style 
+*  of a display of livres_series
+**/ 
+// ====================================================
+
+// ==================
+// @author : quent01
+// ==================
+
+.container-serie-col(
+	@nbrCol : 3,
+	@descPt : 25px
+	){
+
+		width: (100%/@nbrCol);
+		float: left;
+		padding: @grid-gutter-width;
+		@media (max-width: @screen-sm){
+			width: 50%;
+		}
+		@media (max-width: @screen-xs){
+			width: 100%;
+		}
+
+		
+		.views-field{
+			position: relative;
+			background-color: @gray;
+			.transition(all 0.3s ease-in-out);
+			.drop-shadow(
+				@x: 0px, @y: 1px, 
+				@blur: 2px, @spread: 0, 
+				@hexColor: #000, @alpha: 0.45
+			);
+			&:hover,
+			&:active{
+				.drop-shadow(
+					@x: 0px, @y: 2px, 
+					@blur: 2px, @spread: 0px, 
+					@hexColor: #000, @alpha: 0.65
+				);	
+			}
+		}
+
+		.title{
+			text-align: center;
+			background-color: #000;
+			height: 30px;
+			position: relative;
+			z-index: 1000;
+			.drop-shadow(
+				@x: 0px, @y: 2px, 
+				@blur: 3px, @spread: 0, 
+				@hexColor: #000, @alpha: 0.75
+			);
+			a{
+				line-height: 30px;
+				text-decoration: none;
+				display: block;
+				.transition(all 0.3s ease-in-out);
+				
+				&:hover,
+				&:active{
+					background-color: @gray-darker;
+					color: @brand-red;
+					text-shadow:none;
+				}
+			}
+		}
+	
+		.img{
+			text-align: center;
+			position: relative;
+			z-index: 99; //img is on top
+			img{
+				.transition(all 0.3s ease-in-out);
+				
+				&:hover,
+				&:active{
+					// .drop-shadow(
+					// 	@x: 2px, @y: 1px, 
+					// 	@blur: 2px, @spread: 1px, 
+					// 	@hexColor: #000, @alpha: 0.85
+					// );
+					// .scale(1.2);
+					opacity: 0.7;
+				}
+			}
+		}
+		
+		.kawaiie-container-livre-read-more(@descPt : @descPt);
+}
